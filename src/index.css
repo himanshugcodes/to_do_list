@@ -1,13 +1,147 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.todo_container {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+.todo_row {
+  min-width: 380px;
+  max-width: 550px;
+}
+.user_input_main {
+  background: #ffffff36;
+  display: flex;
+  justify-content: center;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+.user_input_main form {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eee;
+}
+.user_input_main h2 {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.user_input_main input {
+  background: none;
+  border: none;
+  height: 40px;
+  border-radius: 0px;
+  width: 70%;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.user_input_main button {
+  background: none;
+  border: none;
+  height: 44px;
+  border-radius: 0px;
+  width: 30%;
+  font-weight: 700;
+  font-size: 16px;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.listShow_main {
+  background: #ffffff36;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 10px;
+  flex-direction: column;
+  max-height: 285px;
+  overflow: auto;
+}
+.listShow_main ul {
+  list-style-type: none;
+  margin-block: 0;
+  margin: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+  width: 100%;
+}
+.listShow_main ul li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  transition: 0.5s linear;
+}
+
+.listShow_main ul li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listShow_main ul li .list_name {
+  margin-right: 25px;
+}
+.list_action button {
+  margin-left: 10px;
+}
+.list_action {
+  display: flex;
+}
+.list_action button {
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+}
+.list_action button:last-child {
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.allDelete button {
+  margin-top: 10px;
+  height: 38px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 700;
+  transition: 0.5s linear;
+}
+
+.listShow_main h4 {
+  margin: 8px 0 0px 0;
+}
+.error-message {
+  color: red;
+  margin: 5px 0 0 0;
+  background: #fff;
+  padding: 4px 4px;
+  font-size: 14px;
 }
